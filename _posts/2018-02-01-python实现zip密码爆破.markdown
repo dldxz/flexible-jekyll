@@ -24,28 +24,28 @@ emmmm
 
 再来我们要打开字典文件，python内置函数有一个*open()*函数
 这是runoob网站上对于*open()*函数的说明
-	open(name, mode, buffering)
-	name : 一个包含了你要访问的文件名称的字符串值。
-	mode : mode 决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。
-	buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buffering 的值取 1，访问文件时会寄存行。如果将 buffering 的值设为大于 1 的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。
+    open(name, mode, buffering)
+    name : 一个包含了你要访问的文件名称的字符串值。
+    mode : mode 决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。
+    buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buffering 的值取 1，访问文件时会寄存行。如果将 buffering 的值设为大于 1 的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。
 对于字典文件我们只需要只读，第三个参数可以无视
 
 主体有了，加个循环再加个*try*，代码就算是写好了
-	import zipfile
-	print("使用时请将程序放至密码文件与zip文件同意文件夹！\n")
-	dictlocation=input("请输入字典名字：")
-	ziplocation=input("请输入zip文件：")
-	a=open(dictlocation,"r")
-	f=zipfile.ZipFile(ziplocation)
-	for line in a:
-		ps=line[:-1]
-		try:
-			y=f.extractall(pwd=ps.encode('utf-8'))
-			print("Found PassWord:",ps)
-			print("解压成功！")
-			break
-		except:
-			continue
-		else:
-			print("爆破失败！")
+    import zipfile
+    print("使用时请将程序放至密码文件与zip文件同意文件夹！\n")
+    dictlocation=input("请输入字典名字：")
+    ziplocation=input("请输入zip文件：")
+    a=open(dictlocation,"r")
+    f=zipfile.ZipFile(ziplocation)
+    for line in a:
+	    ps=line[:-1]
+    	try:
+	    	y=f.extractall(pwd=ps.encode('utf-8'))
+	    	print("Found PassWord:",ps)
+	    	print("解压成功！")
+	    	break
+	    except:
+	    	continue
+	    else:
+		    print("爆破失败！")
 以上是暂时的代码，GUI以及打包程序我会尽快试着实现的。
