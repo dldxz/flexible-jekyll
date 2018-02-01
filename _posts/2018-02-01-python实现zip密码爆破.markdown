@@ -48,4 +48,5 @@ emmmm
 	    	continue
 	    else:
 		    print("爆破失败！")</code></pre>
+莫名其妙缩进消失了，容我去研究下markdown
 以上是暂时的代码，GUI以及打包程序我会尽快试着实现的。
