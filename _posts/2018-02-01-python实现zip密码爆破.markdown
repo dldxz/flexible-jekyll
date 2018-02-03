@@ -37,7 +37,6 @@ buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buf
 主体有了，加个循环再加个 *try*，代码就算是写好了
 
 {% highlight python %}
-    python
     import zipfile
     print("使用时请将程序放至密码文件与zip文件同一文件夹！\n")
     dictlocation=input("请输入字典名字：")
