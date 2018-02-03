@@ -27,7 +27,6 @@ socket.connect(address)
 Connect to a remote socket at address. (The format of address depends on the address family — see above.)
 >
 If the connection is interrupted by a signal, the method waits until the connection completes, or raise a socket.timeout on timeout, if the signal handler doesn’t raise an exception and the socket is blocking or has a timeout. For non-blocking sockets, the method raises an InterruptedError exception if the connection is interrupted by a signal (or the exception raised by the signal handler).
-{% endhighlight %}
 
 
 第一个函数用来生成一个套接字，emmmm，我也不是很懂这个套接字是个什么意思，总之要这样用就对了，第二个函数就是用来连接我们需要连接的端口了，注意看描述，它会等待至连接完成或者是超时，我估计最后的程序运行起来速度很慢就是这个原因，等什么时候看看能不能改进下。
