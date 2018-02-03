@@ -44,16 +44,16 @@ buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buf
     a=open(dictlocation,"r")
     f=zipfile.ZipFile(ziplocation)
     for line in a:
-	    ps=line[:-1]
+        ps=line[:-1]
     	try:
-	    	y=f.extractall(pwd=ps.encode('utf-8'))
-	    	print("Found PassWord:",ps)
-	    	print("解压成功！")
-	    	break
-	    except:
-	    	continue
-	    else:
-		    print("爆破失败！")
+        	y=f.extractall(pwd=ps.encode('utf-8'))
+        	print("Found PassWord:",ps)
+        	print("解压成功！")
+        	break
+        except:
+        	continue
+        else:
+    	    print("爆破失败！")
 {% endhighlight %}
 
 莫名其妙缩进消失了，容我去研究下markdown

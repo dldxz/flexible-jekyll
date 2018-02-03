@@ -36,19 +36,19 @@ If the connection is interrupted by a signal, the method waits until the connect
 代码如下：
 
 {% highlight python %}
-import socket
-ip=input("请输入要扫描的ip地址：")
-PortBegin=input("请输入开始扫描的端口：")
-PortEnd=input("请输入结束扫描的端口：")
-s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-for i in range(int(PortBegin),int(PortEnd)+1):
-    try:
-        a=s.connect((ip,i))
-        pass
-    except socket.error:
-        continue
-    else:
-        print(i)
+    import socket
+    ip=input("请输入要扫描的ip地址：")
+    PortBegin=input("请输入开始扫描的端口：")
+    PortEnd=input("请输入结束扫描的端口：")
+    s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    for i in range(int(PortBegin),int(PortEnd)+1):
+        try:
+            a=s.connect((ip,i))
+            pass
+        except socket.error:
+            continue
+        else:
+            print(i)
 {% endhighlight %}
 
 嗯。我写的时候就没有考虑过用户体验所以别说什么不好用（逃
