@@ -3,7 +3,7 @@ layout: post
 title: python实现端口扫描及python文件打包成exe
 date: 2018-02-03 15:41:20 -0800
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: desktop.png # Add image post (optional)
+img: desktop.jpg # Add image post (optional)
 tags: [python，端口扫描，pyinstaller]
 ---
 时隔两天，又回来了。
@@ -60,12 +60,12 @@ for i in range(int(PortBegin),int(PortEnd)+1):
 
 cmd输入pyinstaller.exe -F py文件路径，之后就是等待了。
 话说我在打包端口扫描的时候总是报错
-![](‪flexible-jekyll\assets\img\UnicodeDecodeError.PNG)
+![](‪flexible-jekyll\assets\img\UnicodeDecodeError.jpg)
 
 找遍了所有的博客，终于看到了一个和我抱着一样问题的仁兄，下面有一位前辈说在cmd输入 *chcp 65001*，试了一下还是一样的报错，不过前辈终究是前辈，另一个方法是不要放在非英文目录下，emmmm，这样的错误我应该是不会犯的，马萨卡
 
 好吧我的文件名是全中文的(╯‵□′)╯︵┻━┻，zip爆破也有中文啊为什么它这么顺利
-![](flexible-jekyll\assets\img\succss.PNG)
-![](flexible-jekyll\assets\img\exefile.PNG)
+![](flexible-jekyll\assets\img\succss.jpg)
+![](flexible-jekyll\assets\img\exefile.jpg)
 
 总之最后还是成功了，okey
